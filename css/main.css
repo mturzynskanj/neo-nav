@@ -1,0 +1,526 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+/* THIS DONT NEED TO INCLUDE */
+@font-face {
+    font-family: 'nexalight';
+    src: url('http://iin_fonts.s3.amazonaws.com/nexa_light-webfont.eot');
+    src: url('http://iin_fonts.s3.amazonaws.com/nexa_light-webfont.ttf') format('ttf');
+    src: url('http://iin_fonts.s3.amazonaws.com/nexa_light-webfont.woff') format('woff');
+        src: url('http://iin_fonts.s3.amazonaws.com/Nexa_Light.otf') format('opentype');        
+}
+
+@font-face {
+    font-family: 'nexabold';
+    src: url('http://iin_fonts.s3.amazonaws.com/nexa_bold-webfont.eot');
+    src: url('http://iin_fonts.s3.amazonaws.com/nexa_bold-webfont.ttf') format('ttf');
+    src: url('http://iin_fonts.s3.amazonaws.com/nexa_bold-webfont.woff') format('truetype');
+    src: url('http://iin_fonts.s3.amazonaws.com/Nexa_Bold.otf') format('opentype'); 
+}
+
+.btn-share-red {
+    cursor: pointer;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #DA4F49;
+    background-image: -moz-linear-gradient(top, red, #B20C18);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(red), to(#B20C18));
+    background-image: -webkit-linear-gradient(top, red, #B20C18);
+    background-image: -o-linear-gradient(top, red, #B20C18);
+    background-image: linear-gradient(to bottom, red, #B20C18);
+    background-repeat: repeat-x;
+    border-color: #B20C18 #B20C18 #802420;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='red', endColorstr='#B20C18', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  }
+
+.btn-share-red:hover,
+.btn-share-red:focus,
+.btn-share-red:active {
+    background-color: #B20C18;
+    background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
+    -o-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear;
+    color: #fff;
+
+}
+
+
+body {
+    font-family: "nexalight",Verdana,sans-serif;
+    font-weight: normal;
+ }
+
+a { text-decoration: none; }
+
+.wrapper {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.hide { display: none; }
+
+/* NAV */
+nav p { margin-top:0; }
+
+.top-level-nav, .top-level-toolbox, .low-level-nav, .user-profile .ambassador-level{
+    width: 100%;
+    clear: both;
+}
+
+strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
+    font-family: "nexabold",Verdana,sans-serif;
+}
+
+.top-level-nav > ul, .top-level-toolbox > ul, ul.reward-level, ul.referral-goal {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.top-level-nav > ul > li, .top-level-toolbox > ul > li {
+    list-style: none;
+    display: inline-block;
+    float: left;
+    margin: 0 20px;
+}
+
+.top-level-nav > ul { width: 657px; }
+
+.top-level-nav > ul > li:first-child {
+    text-indent: -9999px;
+    background: url(../img/shareiin-logo.png)no-repeat;
+    background-size: 95%;
+    margin-left: 30px;
+}
+
+.top-level-nav > ul > li:first-child, .top-level-nav > ul > li:first-child a {
+    width: 125px;
+    height: 25px;
+    display: block;
+}
+
+.top-level-nav a, .top-level-toolbox a {
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.neoNav a, .neoNav h2, .neoNav .fa.fa-cog, .neoNav p, .neoNav li {
+    color: #A6A6A6;
+}
+
+.top-level-nav {
+    height: 67px;
+    width: 1024px;
+    background: #fff;
+    position: fixed;
+}
+
+.low-level-nav {
+/*    padding-top: 69px;*/
+}
+
+.top-level-nav > ul, .faqNav, .user-profile {
+    border: 1px solid #eee;
+    border-top: 0;
+    height: 45px;
+    padding-top: 20px;
+    margin-bottom: 3px;
+    float: left;
+}
+
+.user-name {
+    margin-left: 10px;
+    float: right;
+}
+
+.user-profile {
+    width: 275px;
+    text-align: right;
+    padding: 10px;
+    font-size: 18px;
+    position: relative;
+}
+
+.edit-user-profile {
+    position: absolute;
+    top: 65px;
+    left: -1px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-top: 0;
+    width: 295px;
+    height: 195px;
+    display: none;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 15px;
+    float: right;
+}
+
+.faqNav {
+    width: 60px;
+    display: block;
+    margin: 0 3px;
+}
+
+.faqNav a .fa.fa-question {
+    font-size: 22px;
+    text-align: center;
+    margin: 3px auto 0;
+    display: block;
+}
+
+.user-profile .ambassador-level {
+    display: block;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.top-level-toolbox {
+    padding-top: 68px;
+}
+
+.top-level-toolbox > ul {
+    background: #EEE;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 3px;
+    display: none;
+}
+
+.user-profile .fa.fa-cog {
+    font-size: 30px;
+}
+
+.edit-gear {
+    float: right;
+    margin: 10px 20px 0 15px;
+}
+
+.top-level-toolbox > ul > li {
+    padding-top: 8px;
+}
+
+.top-level-toolbox > ul > li:first-child {
+    margin-left: 30px;
+}
+
+.low-level-nav h2 {
+    font-size: 16px;
+    margin:0;
+}
+
+ul.reward-level, ul.referral-goal, .offer-nav {
+    height: 100px;
+    border: 1px solid #eee;
+    margin-top: 0px;
+    float: left;
+    padding: 20px 25px;
+}
+
+.reward-level {
+    width: 250px;
+}
+
+.referral-goal {
+    width: 302px;
+    margin: 0 3px;
+}
+
+.offer-nav {
+    width: 310px;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
