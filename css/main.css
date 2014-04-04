@@ -308,10 +308,53 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
     margin-left: 30px;
 }
 
+.low-level-nav{
+    position:relative;
+    }
+
 .low-level-nav h2 {
     font-size: 16px;
-    margin:0;
+    margin:0 0 10px;
 }
+
+.low-level-nav .xl-text + span{
+    margin-top:-13px;
+    }
+
+.low-level-nav:after{
+    content:'';
+    position:absolute;
+    left:50%;
+    top:142px;
+    width:40px;
+    height:40px;
+    background: blue;
+    border-top-width: 40px;
+    border-color:#fff;
+
+
+    }
+
+
+.low-level-nav>.arrow {
+    left: 50%;
+    margin-left: -9px;
+    border-bottom-width: 0;
+    border-top-color: #999;
+    border-top-color: red;
+    bottom: -11px;
+    }
+
+
+.low-level-nav>.arrow,  .low-level-nav>.arrow:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    }
+
 
 ul.reward-level, ul.referral-goal, .offer-nav {
     height: 100px;
@@ -323,16 +366,84 @@ ul.reward-level, ul.referral-goal, .offer-nav {
 
 .reward-level {
     width: 250px;
+    padding:0 30px;
+    -moz-box-sizing: border-box;
 }
+
+.referral-goal li:first-child ~ li,
+.reward-level li:first-child ~ li{
+    float:left;
+    text-align: center;
+
+    }
+
+.reward-level li:nth-child(3){
+    width:40%;
+    position:relative
+    }
+
+
+.reward-level li:nth-child(3):after{
+    content:'';
+    width:1px;
+    height:60px;
+    background-color:#eee;
+    position:absolute;
+    right:0px;
+    top:0;
+    }
+
+
+
+
+.reward-level li:last-child{
+    width:60% !important;
+    }
+
+.referral-goal li > span,
+.reward-level li > span {
+    display:block;
+    }
+
+
+
+.referral-goal li:nth-child(3):after{
+    content:'';
+    width:1px;
+    height:60px;
+    background-color:#eee;
+    position:absolute;
+    right:15px;
+    top:0;
+    }
+
+.reward-level li:nth-child(2){
+
+    }
 
 .referral-goal {
     width: 302px;
     margin: 0 3px;
+
 }
+
+.referral-goal li:nth-child(2){
+    width:37%;
+    }
+
+.referral-goal li:nth-child(3){
+    width:35%;
+    position:relative;
+    }
+
+
+
 
 .offer-nav {
     width: 310px;
 }
+
+
 
 
 /* ==========================================================================
@@ -435,6 +546,10 @@ ul.reward-level, ul.referral-goal, .offer-nav {
 .clearfix {
     *zoom: 1;
 }
+
+.xl-text{
+    font-size:40px;
+    }
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
