@@ -984,6 +984,10 @@ section .wrapper div{
     border-top:none;
 }
 
+#faq .accordion-heading .accordion-toggle{
+    padding:4px 15px;
+}
+
 
 
 

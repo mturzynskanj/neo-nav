@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2ed6f1f-7d30-4bba-8019-eb682ec0af6b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mainNav.js" afterPath="$PROJECT_DIR$/js/mainNav.js" />
     </list>
     <ignored path="neo-nav.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="371" column="61" selection-start="20609" selection-end="20609" vertical-scroll-proportion="0.4163424" vertical-offset="5244" max-vertical-offset="6060">
+            <state line="371" column="61" selection-start="20609" selection-end="20609" vertical-scroll-proportion="-6.42" vertical-offset="5244" max-vertical-offset="6060">
               <folding />
             </state>
           </provider>
@@ -67,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="983" column="20" selection-start="16919" selection-end="16919" vertical-scroll-proportion="0.0" vertical-offset="14075" max-vertical-offset="17895">
+            <state line="987" column="21" selection-start="16987" selection-end="16987" vertical-scroll-proportion="0.998782" vertical-offset="13985" max-vertical-offset="17955">
               <folding />
             </state>
           </provider>
@@ -133,8 +131,8 @@
         <option value="$PROJECT_DIR$/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/mainNav.js" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/main.css" />
       </list>
     </option>
   </component>
@@ -439,16 +437,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="983" column="20" selection-start="16919" selection-end="16919" vertical-scroll-proportion="0.0" vertical-offset="14075" max-vertical-offset="17895">
+        <state line="371" column="61" selection-start="20609" selection-end="20609" vertical-scroll-proportion="-6.42" vertical-offset="5244" max-vertical-offset="6060">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="371" column="61" selection-start="20609" selection-end="20609" vertical-scroll-proportion="0.4163424" vertical-offset="5244" max-vertical-offset="6060">
+        <state line="987" column="21" selection-start="16987" selection-end="16987" vertical-scroll-proportion="0.998782" vertical-offset="13985" max-vertical-offset="17955">
           <folding />
         </state>
       </provider>
