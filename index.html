@@ -34,46 +34,37 @@
                         <li><a href="#blog">Blog</a></li>
                         <li><a href="#toolbox">Toolbox</a></li>
                         <li><a href="#events">Events</a></li>
-                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#referralTracker">Referral Tracker</a></li>
                     </ul>
                     
                     <div class="faq-nav">
                         <span>
-                          <a href="#"><i class="fa fa-question"></i> </a>
+                          <a href="#faq"  data-toggle="modal" data-target="#faq"><i class="fa fa-question" ></i></a>
                         </span>
                     </div>
 
                     <div class="user-profile">
                         <i class="fa fa-cog edit-gear"></i>
-
-
                         <p class="user-name">First Name<i class="ambassador-level silver">Ambassador Level</i></p>
-
-                            <!---
-                            <a target="_blank" href="#">Contact Info</a>
-                            <a target="_blank" href="#">Log Out</a>
-                            -->
 
                         <div id="user-controls" class="target-controls" style="display: block;">
                             <form class="iin-auth-upload-picture-form" enctype="multipart/form-data" action="/" method="post" id="iin-auth-upload-picture-form" accept-charset="UTF-8">
                             <div>
-                            <div id="picture-wrapper-large" class="picture-in">
+                                <div id="picture-wrapper-large" class="picture-in">
 
+                                    <div class="user-picture">
+                                        <img typeof="foaf:Image" src="img/profile-pic.jpg" alt="">
+                                    </div>
 
+                                    <div class="picture-overlay-text">Upload Photo</div>
+                                    <div class="picture-overlay"></div>
 
-                                <div class="user-picture">
-                                    <img typeof="foaf:Image" src="img/profile-pic.jpg" alt="">
                                 </div>
 
-                                <div class="picture-overlay-text">Upload Photo</div>
-                                <div class="picture-overlay"></div>
-
-                            </div>
-
-                            <div class="control-group form-type-file form-item-files-picture-upload form-item">
-                            <label for="edit-picture-upload" class="control-label">  </label>
-                                <div class="controls"> <input type="file" id="edit-picture-upload" name="files[picture_upload]" size="48" class="form-file">
-                            </div>
+                                <div class="control-group form-type-file form-item-files-picture-upload form-item">
+                                    <label for="edit-picture-upload" class="control-label">  </label>
+                                    <div class="controls"> <input type="file" id="edit-picture-upload" name="files[picture_upload]" size="48" class="form-file">
+                                </div>
 
                             </div>
 
@@ -90,16 +81,12 @@
                             </div>
                         </div>
 
-
-
-
-
                     </div><!--user-profile-->
 
                 </div><!--top-level-nav-->
 
                 <div class="top-level-toolbox">
-                    <ul>
+                    <ul id="toolbox">
                         <li><a href="#">Refer a Friend</a></li>
                         <li><a href="#">Share Banners</a></li>
                         <li><a href="#">Send an Email</a></li>
@@ -180,31 +167,232 @@
     <section>
         <div class="wrapper">
             <div id="referrals">
-
                 Referrals
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
             </div>
+
             <div id="events">
                 Events
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                </p>
             </div>
+
+            <div id="referralTracker">
+                Referral Tracker
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+
             <div id="blog">
                 Blog
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
             </div>
-
         </div>
     </section>
+
+    <div id="faq" class="modal hide fade" role="dialog" >
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">FAQ</h3>
+        </div>
+        <div class="modal-body">
+            <!-- ACCORDIONS FOR FAQ   -->
+           <strong> Rewards</strong>
+            <div class="accordion" id="rewards">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#rewards" href="#collapseOneRewards">
+                        <i class="fa fa-plus"></i>&nbsp;   When will I get my referral reward?
+                        </a>
+                    </div>
+                    <div id="collapseOneRewards" class="accordion-body collapse ">
+                        <div class="accordion-inner">
+                          Lorem ipsum .....
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#rewards" href="#collapseTwoRewards">
+                            <i class="fa fa-plus"></i>&nbsp;  My friend enrolled, how do I get my reward?
+                        </a>
+                    </div>
+                    <div id="collapseTwoRewards" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                           Lorem Ipsum
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#rewards" href="#collapseThreeRewards">
+                            <i class="fa fa-plus"></i>&nbsp;  What form does my reward come in?
+                        </a>
+                    </div>
+                    <div id="collapseThreeRewards" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Lorem Ipsum
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#rewards" href="#collapseFourRewards">
+                            <i class="fa fa-plus"></i>&nbsp;   Can I apply my reward to my tuition?
+                        </a>
+                    </div>
+                    <div id="collapseFourRewards" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Lorem Ipsum
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#rewards" href="#collapseFiveRewards">
+                            <i class="fa fa-plus"></i>&nbsp;   How much money will I receive?
+                        </a>
+                    </div>
+                    <div id="collapseFiveRewards" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Lorem Ipsum
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#rewards" href="#collapseSixRewards">
+                            <i class="fa fa-plus"></i>&nbsp;  How do I check to see if I’m an Ambassador so I can get my referral reward?
+                        </a>
+                    </div>
+                    <div id="collapseSixRewards" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Lorem Ipsum
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+           <strong>Tracking Your Referral</strong>
+            <div class="accordion" id="tracking">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#tracking" href="#collapseThree">
+                            <i class="fa fa-plus"></i>&nbsp;  I don't see my friend listed on my referral; can you add him?
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="accordion-body collapse ">
+                        <div class="accordion-inner">
+                            Anim pariatur cliche...
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                            <i class="fa fa-plus"></i>&nbsp;   How can I add my friend to my tracker?
+                        </a>
+                    </div>
+                    <div id="collapseFour" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Anim pariatur cliche...
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <strong>Referring</strong>
+            <div class="accordion" id="referring">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#referring" href="#collapseOneReferring">
+                            <i class="fa fa-plus"></i>&nbsp;   How do I refer my friend?
+                        </a>
+                    </div>
+                    <div id="collapseOneReferring" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Anim pariatur cliche...
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#referring" href="#collapseTwoReferring">
+                            <i class="fa fa-plus"></i>&nbsp;   How do I add a banner to my website?
+                        </a>
+                    </div>
+                    <div id="collapseTwoReferring" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Anim pariatur cliche...
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#referring" href="#collapseThreeReferring">
+                            <i class="fa fa-plus"></i>&nbsp;   How can I share a link on Facebook and have it tracked to me?
+                        </a>
+                    </div>
+                    <div id="collapseThreeReferring" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Anim pariatur cliche...
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <strong>General/Misc</strong>
+            <div class="accordion" id="general">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#general" href="#collapseOneGeneral">
+                            <i class="fa fa-plus"></i>&nbsp;  How can I change my email address?
+                        </a>
+                    </div>
+                    <div id="collapseOneGeneral" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Anim pariatur cliche...
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#referring" href="#collapseTwoGeneral">
+                            <i class="fa fa-plus"></i>&nbsp;   Are there any savings offers available right now?
+                        </a>
+                    </div>
+                    <div id="collapseTwoGeneral" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Anim pariatur cliche...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
 
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/bootstrap.js"></script>
        <script src="js/mainNav.js"></script>
     </body>
 </html>

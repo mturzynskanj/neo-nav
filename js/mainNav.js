@@ -22,6 +22,7 @@ SHAREIIN.mainNavigation = (function ($) {
         $lowerNavLinks,
         $referralDetails,
         $referralDetailsTrigger,
+        windowScrolled,
         $currentOpenedElement=null;
 
       function cacheDOM(){
@@ -31,29 +32,45 @@ SHAREIIN.mainNavigation = (function ($) {
               $lowerNav=$('.low-level-nav'),
               $referralDetailsTrigger = $('.low-level-nav').find('.action-target'),
               $referralDetails=$('.referral-details');
-
       }
 
+      function scrollPageToAnchor(that,initialScroll){
 
+          var target = $(that.hash);
+          target = target.length ? target : $('[name=' + that.hash.slice(1) +']');
+          if (target.length) {
+              $('body, html').animate({
+                 scrollTop: target.offset().top - initialScroll
+              }, 1000);
+              windowScrolled=true;
+              return false;
+          }
+      }
+
+      function scrollToPageTop(){
+          if(windowScrolled){
+              $('html,body').animate({
+                  scrollTop: 75
+              }, 1000);
+              windowScrolled=false;
+          }
+      }
 
     /* binding dom events */
 
     var eventBinder = function () {
+        var initialScroll;
         $topNavLinks.on('click',function(e){
             e.preventDefault();
-            console.log('current opened element',$currentOpenedElement);
+
             var that=this,
                 hrefAttr = $(this).attr('href');
-            /*
-            if ( $userProfile.hasClass('opened') ) {
-                 $userProfile.removeClass('opened');
-            }
-            */
 
             if($currentOpenedElement != null && $currentOpenedElement !== $toolboxSubNav){
                 $currentOpenedElement.removeClass('opened');
                 $currentOpenedElement=null;
                 if(hrefAttr.indexOf('#toolbox')==0){
+                    scrollPageToAnchor(this,75);
                     $toolboxSubNav.toggleClass('opened');
                     $currentOpenedElement=$toolboxSubNav;
                 }else{
@@ -61,20 +78,19 @@ SHAREIIN.mainNavigation = (function ($) {
                 }
             }else{
                 if(hrefAttr.indexOf('#toolbox')==0){
+                    scrollPageToAnchor(this,75);
                     $toolboxSubNav.toggleClass('opened');
                     $currentOpenedElement=$toolboxSubNav;
                 }else{
                     $toolboxSubNav.removeClass('opened');
+                    scrollPageToAnchor(this,75);
                 }
             }
         });
 
         $userProfile.on('click',function(e){
-            console.log('$currentOpenedElement',$currentOpenedElement);
-            console.log(typeof($currentOpenedElement));
-            console.log(typeof($(this)));
 
-
+               //scrollToPageTop();
 
                if($currentOpenedElement !== null && $currentOpenedElement.get(0) !== $(this).get(0)){
                    $currentOpenedElement.removeClass('opened');
@@ -98,6 +114,8 @@ SHAREIIN.mainNavigation = (function ($) {
 
         $referralDetailsTrigger.on('click',function(e){
 
+            //scrollToPageTop();
+
             if($currentOpenedElement != null && $currentOpenedElement.get(0) !== $lowerNav.get(0)){
                 $currentOpenedElement.removeClass('opened');
 
@@ -118,9 +136,10 @@ SHAREIIN.mainNavigation = (function ($) {
 
         });
 
-
-
-
+        $referralDetails.on('click',function(e){
+              $lowerNav.removeClass('opened');
+              $currentOpenedElement=null;
+        })
     };
 
     return{
@@ -129,11 +148,6 @@ SHAREIIN.mainNavigation = (function ($) {
              eventBinder();
 
 
-            /*
-            controller.setupValidationRules();
-            controller.validateForm();
-            view.setupGA();
-            */
         }
     }
 })(jQuery);
@@ -141,3 +155,20 @@ jQuery('document').ready(function () {
     SHAREIIN.mainNavigation.init();
 });
 
+/*
+$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});
+
+*/
