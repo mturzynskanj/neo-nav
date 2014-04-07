@@ -9,16 +9,20 @@
 					links.removeClass('active');
 					that.addClass('active');
 
-				if ( editCont.is(':visible') ) {
-					editCont.slideUp(200);
+				if ( editCont.hasClass('opened') ) {
+					<!-- editCont.slideUp(200); -->
+                    editCont.removeClass('opened');
+
 				}
 
 
 				var navDrop = function(elem, showSelector){
 					if ( tAttr.indexOf(elem) === 0 ){
-						showSelector.slideToggle(200);
+					  <!-- 	showSelector.slideToggle(200); -->
+                        showSelector.toggleClass('opened');
 					} else {
-						showSelector.slideUp(200);
+					  <!--	showSelector.slideUp(200); -->
+                         showSelector.removeClass('opened');
 					}
 				};
 
@@ -27,15 +31,25 @@
 			})
 		},
 
+        lowerNav:function(links,referralDetails,lowerNav){
+            links.on('click',function(e){
+                 $('.top-level-nav').find('.opened').removeClass('opened');
+                 lowerNav.toggleClass('opened');
+            });
+
+        },
+
 		profile : function( clickArea, showCont, toolCont ){
 			clickArea.on('click', function(){
 				var that = $(this);
 					
 					if ( toolCont.is(':visible') ) {
-						toolCont.slideUp(200);
+					   <!--toolCont.slideUp(200);-->
+                        toolCont.removeClass('opened');
 					}
 
-					showCont.slideToggle(200);
+				<!--	showCont.slideToggle(200);-->
+                        $(this).toggleClass('opened');
 
 			})
 		},
@@ -73,12 +87,16 @@
 
 		init : function(){
 			var mainNav = $('.top-level-nav').find('li');
-			var toolNav = $('.top-level-toolbox').find('ul');
-			var editCont = $('.edit-user-profile');
+			var toolNav = $('.top-level-toolbox');
+			var editCont = $('.user-profile');
+            var lowerNav=$('.low-level-nav');
+            var lowerNavLinks = $('.low-level-nav').find('.action-target');
+            var referralDetails=$('.referral-details');
 
 			//this constructor setsup initial selectors
-			var topLinks = new NeoNav.topNav( mainNav, toolNav, editCont);
-			var editProfile = new NeoNav.profile($('.user-profile'), editCont, toolNav );
+			 new NeoNav.topNav( mainNav, toolNav, editCont);
+             new NeoNav.lowerNav(lowerNavLinks,referralDetails,lowerNav);
+			 new NeoNav.profile($('.user-profile'), editCont, toolNav );
 		}
 	};
 

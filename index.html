@@ -12,10 +12,12 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
+       <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link href="css/bootstrap.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/main.css">
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+
+       <!--- <script src="js/vendor/modernizr-2.6.2.min.js"></script> -->
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -24,7 +26,7 @@
 
         <!-- NAV -->
         <nav>
-            <div class="wrapper neoNav">  
+            <div class="wrapper neo-nav" id="neoNav">
                 <div class="top-level-nav">
                     <ul><!--make sure to update this to the section that you want to anchor-->
                         <li><a href="/">shareIIN</a></li>
@@ -35,23 +37,63 @@
                         <li><a href="#blog">Blog</a></li>
                     </ul>
                     
-                    <div class="faqNav">
-                        <a href="#"><i class="fa fa-question"></i> </a>
+                    <div class="faq-nav">
+                        <span>
+                          <a href="#"><i class="fa fa-question"></i> </a>
+                        </span>
                     </div>
 
-                    <div class="user-profile">                      
+                    <div class="user-profile">
                         <i class="fa fa-cog edit-gear"></i>
-                        
-                        <div class="profile">
-                            <img src="img/profile-pic.jpg"/>
-                        </div>
-                        
+
+
                         <p class="user-name">First Name<i class="ambassador-level silver">Ambassador Level</i></p>
 
-                        <div class="edit-user-profile">
+                            <!---
                             <a target="_blank" href="#">Contact Info</a>
                             <a target="_blank" href="#">Log Out</a>
+                            -->
+
+                        <div id="user-controls" class="target-controls" style="display: block;">
+                            <form class="iin-auth-upload-picture-form" enctype="multipart/form-data" action="/" method="post" id="iin-auth-upload-picture-form" accept-charset="UTF-8">
+                            <div>
+                            <div id="picture-wrapper-large" class="picture-in">
+
+
+
+                                <div class="user-picture">
+                                    <img typeof="foaf:Image" src="img/profile-pic.jpg" alt="">
+                                </div>
+
+                                <div class="picture-overlay-text">Upload Photo</div>
+                                <div class="picture-overlay"></div>
+
+                            </div>
+
+                            <div class="control-group form-type-file form-item-files-picture-upload form-item">
+                            <label for="edit-picture-upload" class="control-label">  </label>
+                                <div class="controls"> <input type="file" id="edit-picture-upload" name="files[picture_upload]" size="48" class="form-file">
+                            </div>
+
+                            </div>
+
+                            <button class="btn form-submit ajax-processed" id="edit-submit--3" name="op" value="Upload" type="submit">Upload</button>
+                            <div id="picture-upload-errors" class="form-wrapper" style="display: none;"></div>
+                                <input type="hidden" name="form_build_id" value="form-LeC52jciyJm4PKM5B0XPRxa16_UNefVc_QC32w9gwDU">
+                                <input type="hidden" name="form_token" value="vpv1eNGpnVkHqCQ0zxt-XUkZ80D7jSL7SF_RAbRLCjc">
+                                <input type="hidden" name="form_id" value="iin_auth_upload_picture_form">
+                             </div>
+                            </form>
+                            <div id="user-controls-buttons">
+                                <a href="https://students.integrativenutrition.com/Student/ProfileEdit.aspx" id="user_block_contact_info" class="btn btn-lg" target="_blank">Contact Info&nbsp;&nbsp;<i class="fa fa-share"></i></a>
+                                <a href="/user/logout" id="user_block_sign_out" class="btn btn-share-red">Sign Out</a>
+                            </div>
                         </div>
+
+
+
+
+
                     </div><!--user-profile-->
 
                 </div><!--top-level-nav-->
@@ -68,43 +110,101 @@
 
                 <div class="low-level-nav">
                     <div class="referral-Section">
-                        <ul class="reward-level">
-                            <li><h2><strong>Ambassador</strong> Reward Level</h2><li>
-                            <li><i class="ambassador-level-silver"></i>Silver</li>
-                            <li><span class="xl-text">$400</span><span>Per Enrollment</span></li>
-                        </ul>
+                        <div class="reward-level action-target">
+                            <h2><strong>Ambassador</strong> Reward Level</h2>
+                            <div class="silver ex-border"><i class="ambassador-level-silver fa fa-trophy xl-text"></i><span>Silver</span></div>
+                            <div><span class="xl-text">$400</span><span>Per Enrollment</span></div>
+                        </div>
 
-                        <ul class="referral-goal">
-                            <li><h2><span class="current-month">February</span> Referral Goals</h2></li>
-                            <li>
-                               dfdfdfd
-                            </li>
-                            <li>
-                                <span class="xl-text">35</span><span>Goal</span>
-                            </li>
-                            <li>
+                        <div class="referral-goal action-target">
+                            <h2><span class="current-month"><strong>February</strong></span> Referral Goals</h2>
+                            <div class="alt1 ex-border">
+                                <div>
+                                   graph
+                                </div>
+                                <div>
+                                    <span class="xl-text">35</span><span>Goal</span>
+                                </div>
+                            </div>
+                            <div>
                               <span class="xl-text">20</span><span>Done</span>
-                            </li>
-                        </ul>
-                    </div><!--referral-Section-->
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="offer-nav">
-                        <p>This is an offer</p>
-                    </div>    
+                            <div class="offer-img">
+                                <img class="media-object" data-src="holder.js/64x64" src="img/blaironly.png">
+                            </div>
+
+                            <div class="offer-body">
+                                <h4>New tuition offer</h4>
+
+                                <div class="offer">
+                                    <span>$1000 off tuition until April 1st !</span>
+                                    <a class="btn btn-share-red">Share Offer</a>
+                                </div>
+                            </div>
+
+                    </div>
+                <div class="arrow-down action-target"></div>
+                <div class="arrow-up action-target"></div>
                 </div><!--low-level-nav-->
+
+                <div class="referral-details">
+                    <div>
+
+                        <table class="referral-details-table">
+                            <caption class="platinum"><i class="fa fa-trophy "></i>My Reward Level</caption>
+                            <tr>
+                                <th class="bronze"><strong><h4>Bronze Level</h4></strong><span>0 - 5 Referrals</span></th>
+                                <th class="silver"><strong><h4>Silver Level</h4></strong><span>6 - 19 Referrals</span></th>
+                                <th class="gold"></strong><h4>Gold Level</h4></strong><span>20 - 49 Referrals</span></th>
+                                <th class="platinum"></strong><h4>Platinum Level</h4></strong><span>50+ Referrals</span></th>
+                            </tr>
+                            <tr>
+                                <td class="bronze">Eve</td>
+                                <td class="silver">Jackson</td>
+                                <td class="gold">94</td>
+                                <td class="platinum">ererere</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="arrow-up action-target"></div>
+                </div>
             </div><!--wrapper-->
+
         </nav>
 
     <section>
-        <div class="wrapper">  
-                                                            <!--  GO BAR -->
-                                                            <!-- MY REWARD LEVEL -->
-        </div><!--wrapper-->
+        <div class="wrapper">
+            <div id="referrals">
+
+                Referrals
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+            <div id="events">
+                Events
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+               </p>
+            </div>
+            <div id="blog">
+                Blog
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+
+        </div>
     </section>
 
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/main.js"></script>
+       <script src="js/mainNav.js"></script>
     </body>
 </html>
