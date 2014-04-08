@@ -234,7 +234,9 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
     width: 1040px;
     background: #fff;
     position: fixed;
-    top:2px;
+    top:0;
+    padding-top:1px;
+    border-top:1px solid #eee;
     z-index:1000;
 }
 
