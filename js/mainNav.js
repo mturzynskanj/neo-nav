@@ -34,6 +34,43 @@ SHAREIIN.mainNavigation = (function ($) {
               $referralDetails=$('.referral-details');
       }
 
+      function initGraph(){
+             var $shareiinChart=$('.shareiin-chart');
+                 $('.shareiin-chart').data('percent',30) ;
+            var ambasadorlevel=$shareiinChart.data('ambasadorlevel');
+
+            var barColor;
+             switch(ambasadorlevel){
+                 case 'bronze':
+                  barColor='#dca77f';
+                 break;
+
+                 case 'silver':
+                     barColor='#b1cbd3';
+                     break;
+
+                 case 'gold':
+                     barColor='#fab446';
+                     break;
+
+                 case 'platinum':
+                     barColor='#d0d1d1';
+                     break;
+
+             }
+
+              $('.shareiin-chart').easyPieChart({
+                  easing: 'easeOutBounce',
+                  lineWidth: 13,
+                  barColor:barColor,
+                  size: 100,
+                  onStep: function(from, to, percent) {
+                      $(this.el).find('.percent').text(Math.round(percent));
+                  }
+              });
+
+      }
+
       function scrollPageToAnchor(that,initialScroll){
 
           var target = $(that.hash);
@@ -146,6 +183,8 @@ SHAREIIN.mainNavigation = (function ($) {
         init: function () {
              cacheDOM();
              eventBinder();
+             console.log()
+             initGraph();
 
 
         }
@@ -154,21 +193,3 @@ SHAREIIN.mainNavigation = (function ($) {
 jQuery('document').ready(function () {
     SHAREIIN.mainNavigation.init();
 });
-
-/*
-$(function() {
-    $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-                $('html,body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
-            }
-        }
-    });
-});
-
-*/

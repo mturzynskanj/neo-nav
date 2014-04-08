@@ -155,7 +155,7 @@ body {
 a { text-decoration: none; }
 
 .wrapper {
-    width: 1024px;
+    width: 1040px;
     margin: 0 auto;
 }
 
@@ -186,10 +186,10 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
     list-style: none;
     display: inline-block;
     float: left;
-    margin: 0 13px;
+    margin: 0 14px;
 }
 
-.top-level-nav > ul { width: 657px; }
+.top-level-nav > ul { width: 671px; }
 
 .top-level-nav > ul > li:first-child {
     text-indent: -9999px;
@@ -231,7 +231,7 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
 
 .top-level-nav {
     height: 67px;
-    width: 1024px;
+    width: 1040px;
     background: #fff;
     position: fixed;
     top:2px;
@@ -257,7 +257,7 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
 }
 
 .user-profile {
-    width: 275px;
+    width: 277px;
     text-align: right;
     padding: 10px;
     font-size: 18px;
@@ -277,7 +277,6 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
 .edit-user-profile {
     position: absolute;
     top: 65px;
-    left: -1px;
     background: #fff;
     border: 1px solid #eee;
     border-top: 0;
@@ -290,20 +289,15 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
     -o-transition: all 1s ease-out;
     transition: all 1s ease-out;
 
-
 }
 
 .opened.user-profile{
     height:300px;
     opacity:1;
 
-
-
     -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-
-
     }
 
 .profile img {
@@ -326,15 +320,13 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
     height:30px;
     display:inline-block;
     border-radius: 50%;
-    border:2px solid #666;
-
+    border:2px solid #a6a6a6;
     }
 
-.faq-nav .fa-question {
-    font-size: 22px;
+.faq-nav  a{
+    font-size: 18px;
     margin-top:4px;
-
-
+    font-weight:bold;
 }
 
 .user-profile .ambassador-level {
@@ -353,7 +345,6 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
     -moz-transition: all 1s ease-out;
     -o-transition: all 1s ease-out;
     transition: all 1s ease-out;
-
     }
 
 .top-level-toolbox.opened{
@@ -392,7 +383,6 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
     margin-left: 30px;
 }
 
-
 .low-level-nav{
     position:relative;
     display:inline-block;
@@ -405,11 +395,10 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
 .low-level-nav h2 {
     font-size: 16px;
     line-height:20px;
-    margin:0 0 10px;
+    margin:0 0 20px;
 }
 
 .low-level-nav h2 strong{
-      font-weight:500;
       color:#999;
     }
 
@@ -420,8 +409,6 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
 .low-level-nav h2{
     text-align: center;
     }
-
-
 
 .neo-nav  .low-level-nav .silver span,
 .neo-nav .low-level-nav .silver{
@@ -454,7 +441,6 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
     width:0px;
     height:0px;
     border-top: 17px solid #999;
-
 
     border-left:17px solid transparent;
     border-right:17px solid transparent;
@@ -515,9 +501,6 @@ div.arrow-down:after{
     transition: all 1s ease-out;
     }
 
-
-
-
 .low-level-nav.opened + .referral-details{
     height:500px;
     margin-bottom:50px;
@@ -531,7 +514,6 @@ div.arrow-down:after{
     position:absolute;
     right:0px;
     bottom:0;
-
     }
 
 .referral-details table{
@@ -545,9 +527,6 @@ div.arrow-down:after{
     border:none;
     width:245px;
     }
-
-
-
 
 .low-level-nav .arrow-up,
 .low-level-nav.opened .arrow-down{
@@ -572,13 +551,11 @@ div.arrow-down:after{
     transition: all 2s linear;
     }
 
-
 .referral-details .arrow-up:after{
     left:50.14%;
     position:absolute;
     bottom:-20px;
     margin-left:-15px;
-
     }
 
 .opened + .referral-details .arrow-up{
@@ -601,7 +578,6 @@ div.arrow-down:after{
     margin-bottom:5px;
 }
 
-
 .referral-details-table td p{
     margin-bottom:5px;
 }
@@ -609,7 +585,6 @@ div.arrow-down:after{
 .referral-details-table tr th{
     padding:10px 0;
     }
-
 
 .referral-details-table td{
     padding:10px;
@@ -628,7 +603,6 @@ div.arrow-down:after{
     font-size:20px;
     text-align: center;
     position:absolute;
-
     }
 
 .referral-details-table caption i{
@@ -764,10 +738,10 @@ td.gold{
 .reward-level,
 .referral-goal,
 .offer-nav {
-    height: 120px;
+    height: 140px;
     border: 1px solid #eee;
     margin-top: 0px;
-    padding: 10px 0px;
+    padding: 15px 0px;
     float:left;
 
 
@@ -779,11 +753,16 @@ td.gold{
 
 
 .referral-Section{
-    width:660px;
+    width:673px;
     float:left;
     margin-right:3px;
 
     }
+
+.referral-goal h2{
+    text-align: left;
+    padding-left:25px;
+}
 
 
 /**************** REWARD LEVEL ******************************/
@@ -804,15 +783,16 @@ td.gold{
 /************** REFERRAL GOAL ******************************/
 
 .referral-goal{
-    width:366px;
+    width:380px;
     margin:0;
     }
 
 .referral-goal  div{
     display:inline-block;
     }
+
 .referral-goal .alt1{
-    width:220px;
+    width:229px;
     }
 
 .referral-goal .alt1 > div{
@@ -821,7 +801,7 @@ td.gold{
     }
 
 .referral-goal .alt1 + div{
-    width:135px;
+    width:130px;
     text-align:center;
     }
 
@@ -836,8 +816,19 @@ td.gold{
     background-color:#eee;
     position:absolute;
     right:0px;
-    bottom:10%;
+    bottom:6px;
     }
+
+ .referral-goal .ex-border:after{
+     bottom:45px;
+ }
+
+.left-alignment{
+     display:inline-block;
+     margin:0 auto;
+     text-align:left;
+ }
+
 
 
 /*
@@ -914,7 +905,7 @@ td.gold{
 
 /********************* OFFER NAV ***************************/
 .offer-nav {
-    width: 361px;
+    width: 364px;
 }
 
 .offer-nav > div{
@@ -922,11 +913,10 @@ td.gold{
     }
 
 .offer-nav .offer-img{
-    width:105px;
-    height:107px;
-    overflow:hidden;
+
     display:inline-block;
-    padding-right:10px;
+    margin-left:25px;
+    margin-top:-8px;
     }
 
 .offer-nav .offer-img img{
@@ -935,7 +925,7 @@ td.gold{
     }
 
 .offer-nav .offer-body{
-    width:240px;
+    width:220px;
     text-align:center;
     }
 
@@ -946,27 +936,26 @@ td.gold{
     }
 
 .offer-nav .offer{
-    width:50%;
+    width:60%;
     margin:0 auto;
+    font-size:16px;
     }
 
+.offer-nav .offer .btn{
+    width:110px;
+    margin-top:10px;
+}
 
 section .wrapper div{
       height:200px;
       margin-top:40px;
     }
 
-.offer-nav .offer a{
-    margin-top:5px;
-    }
-
-
 .neo-nav .user-profile #user-controls-buttons a{
     display:block;
     width:70%;
     margin:0 auto 15px;
     }
-
 
 .neo-nav .user-picture{
     margin-bottom:20px;
@@ -1004,6 +993,36 @@ section .wrapper div{
 
 #faq .accordion-heading .accordion-toggle{
     padding:4px 15px;
+}
+
+
+
+/******************* GRAPH ********************/
+
+
+.chart {
+    display: inline-block;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    width: 100px;
+    top:-20px;
+    left:20px;
+}
+.chart canvas {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.percent {
+    display: inline-block;
+    line-height: 100px;
+    z-index: 2;
+}
+.percent:after {
+    content: "%";
+    font-size: 0.8em;
+    margin-left: 0.1em;
 }
 
 
@@ -1110,7 +1129,7 @@ section .wrapper div{
 }
 
 .xl-text{
-    font-size:40px;
+    font-size:50px;
     line-height:40px;
     }
 
