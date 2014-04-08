@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2ed6f1f-7d30-4bba-8019-eb682ec0af6b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mainNav.js" afterPath="$PROJECT_DIR$/js/mainNav.js" />
     </list>
     <ignored path="neo-nav.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,7 +68,7 @@
       <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="958" column="0" selection-start="16890" selection-end="16890" vertical-scroll-proportion="-0.092821784" vertical-offset="14445" max-vertical-offset="18435">
+            <state line="400" column="25" selection-start="8331" selection-end="8331" vertical-scroll-proportion="0.35148516" vertical-offset="5716" max-vertical-offset="18495">
               <folding />
             </state>
           </provider>
@@ -462,7 +460,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="958" column="0" selection-start="16890" selection-end="16890" vertical-scroll-proportion="-0.092821784" vertical-offset="14445" max-vertical-offset="18435">
+        <state line="400" column="25" selection-start="8331" selection-end="8331" vertical-scroll-proportion="0.35148516" vertical-offset="5716" max-vertical-offset="18495">
           <folding />
         </state>
       </provider>

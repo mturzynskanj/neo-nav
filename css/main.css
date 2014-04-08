@@ -395,7 +395,7 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
 .low-level-nav h2 {
     font-size: 16px;
     line-height:20px;
-    margin:0 0 20px;
+    margin:0 0 25px;
 }
 
 .low-level-nav h2 strong{
@@ -778,6 +778,10 @@ td.gold{
     text-align:center;
     }
 
+.reward-level .fa-trophy{
+    line-height:40px;
+}
+
 
 
 /************** REFERRAL GOAL ******************************/
@@ -1006,7 +1010,7 @@ section .wrapper div{
     position: relative;
     text-align: center;
     width: 100px;
-    top:-20px;
+    top:-30px;
     left:20px;
 }
 .chart canvas {
