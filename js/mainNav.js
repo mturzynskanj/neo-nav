@@ -70,7 +70,7 @@ SHAREIIN.mainNavigation = (function ($) {
                 $currentOpenedElement.removeClass('opened');
                 $currentOpenedElement=null;
                 if(hrefAttr.indexOf('#toolbox')==0){
-                    scrollPageToAnchor(this,75);
+                    scrollPageToAnchor(this,120);
                     $toolboxSubNav.toggleClass('opened');
                     $currentOpenedElement=$toolboxSubNav;
                 }else{
@@ -78,12 +78,12 @@ SHAREIIN.mainNavigation = (function ($) {
                 }
             }else{
                 if(hrefAttr.indexOf('#toolbox')==0){
-                    scrollPageToAnchor(this,75);
+                    scrollPageToAnchor(this,120);
                     $toolboxSubNav.toggleClass('opened');
                     $currentOpenedElement=$toolboxSubNav;
                 }else{
                     $toolboxSubNav.removeClass('opened');
-                    scrollPageToAnchor(this,75);
+                    scrollPageToAnchor(this,120);
                 }
             }
         });

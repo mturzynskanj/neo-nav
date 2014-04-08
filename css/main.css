@@ -204,10 +204,17 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
     display: block;
 }
 
-.top-level-nav a, .top-level-toolbox a {
+.top-level-nav a,
+.top-level-toolbox a {
     font-size: 16px;
     line-height: 35px;
 }
+
+.top-level-nav a:active,
+.top-level-toolbox a:active {
+    color:#666;
+}
+
 
 #faq,
 .neo-nav a, .neo-nav h2,
@@ -512,8 +519,8 @@ div.arrow-down:after{
 
 
 .low-level-nav.opened + .referral-details{
-    height:300px;
-
+    height:500px;
+    margin-bottom:50px;
     }
 
 .low-level-nav.opened + .referral-details:before{
@@ -529,13 +536,13 @@ div.arrow-down:after{
 
 .referral-details table{
     width:980px;
-    border:1px solid #eee;
+    border:none;
     margin:100px auto 0;
     }
 
 .referral-details table th,
 .referral-details table td{
-    border:1px solid #eee;
+    border:none;
     width:245px;
     }
 
@@ -584,13 +591,28 @@ div.arrow-down:after{
     position:relative;
     }
 
+.referral-details-table td p,
+.referral-details-table span,
+.referral-details-table h4{
+    color:#666;
+}
+
+.referral-details-table h4{
+    margin-bottom:5px;
+}
+
+
+.referral-details-table td p{
+    margin-bottom:5px;
+}
+
 .referral-details-table tr th{
-    padding:15px 0;
+    padding:10px 0;
     }
 
 
 .referral-details-table td{
-    padding:5px;
+    padding:10px;
 
     }
 
@@ -640,7 +662,7 @@ caption.silver .fa{
     }
 
 caption.bronze .fa{
-    color:#ffcc33;
+    color:#dca77f;
     }
 
 caption.gold .fa{
@@ -652,38 +674,38 @@ caption.platinum .fa{
     }
 
 
-th .silver{
-    background-color:#99cccc;
+th.silver{
+    background-color:#b1cbd3;
     }
 
-tr .silver{
-    background-color:#99cccc;
+td.silver{
+    background-color:#e0eaed;
     }
 
-th .platinum{
-    background-color:#999;
+th.platinum{
+    background-color:#d0d1d1;
     }
 
-tr .platinum{
-    background-color:#eee
+td.platinum{
+    background-color:#eceded
     }
 
 
-th .bronze{
-    background-color:#996600;
+th.bronze{
+    background-color:#dca77f;
 
     }
 
-tr .bronze{
-    background-color:#cebb71;
+td.bronze{
+    background-color:#f1dccc;
     }
 
-th .gold{
-    background-color:#ffcc33;
+th.gold{
+    background-color:#fab446;
     }
 
-tr .gold{
-    background-color:#ffff99;
+td.gold{
+    background-color:#fde1b5;
     }
 /*
 
@@ -931,16 +953,12 @@ tr .gold{
 
 section .wrapper div{
       height:200px;
-      border:1px solid #eee;
+      margin-top:40px;
     }
 
 .offer-nav .offer a{
     margin-top:5px;
     }
-
-
-
-
 
 
 .neo-nav .user-profile #user-controls-buttons a{
@@ -987,11 +1005,6 @@ section .wrapper div{
 #faq .accordion-heading .accordion-toggle{
     padding:4px 15px;
 }
-
-
-
-
-
 
 
 
