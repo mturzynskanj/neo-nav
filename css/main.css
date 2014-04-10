@@ -223,6 +223,11 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
 .neo-nav p, .neo-nav li,
 .neo-nav span{
     color: #A6A6A6;
+    font-family: "nexalight",Verdana,sans-serif;
+}
+
+#neoNav .custom-bold{
+    font-family: "nexabold",Verdana,sans-serif;
 }
 
 .neo-nav a.btn-share-red{
@@ -398,11 +403,12 @@ strong, .top-level-nav > ul > li, .top-level-toolbox > ul > li, .current-month {
     font-size: 16px;
     line-height:20px;
     margin:0 0 25px;
+    font-family: "nexalight",Verdana,sans-serif;
 }
 
-.low-level-nav h2 strong{
-      color:#999;
-    }
+
+
+
 
 .low-level-nav .xl-text + span{
     display:block;
@@ -937,7 +943,7 @@ td.gold{
 
 .offer-nav .offer-body h4{
     text-transform: uppercase;
-    color:#333;
+    color:#666;
     margin:3px 0;
     }
 
